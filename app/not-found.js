@@ -10,7 +10,9 @@ export default function NotFound() {
 
       {/* Foreground Content */}
       <div className="relative z-10 leading-10">
-        <h2 className="text-7xl font-bold text-gray-800 ">Page Not Found</h2>
+        <h2 className=" text-4xl lg:text-7xl font-bold text-gray-800 ">
+          Page Not Found
+        </h2>
         <p className="text-gray-600 mt-2 text-xl">
           Oops! The page you are looking for is missing.
         </p>
