@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={lnter.className}>
         <Navbar />
-        <div className="flex flex-col px-10 py-5 lg:px-20 lg:py-20">
+        <div className="flex flex-col px-5 py-5 lg:px-20 lg:py-20">
           {children}
         </div>
       </body>

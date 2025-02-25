@@ -4,7 +4,7 @@ import MobileNavbar from "./MobileNavbar";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-8 py-5 ">
+    <nav className="flex justify-between items-center px-8 py-5 sticky top-0 bg-white">
       {/* Logo */}
       <Link href="/" className="font-mono text-2xl font-bold text-gray-700">
         tour buddy
