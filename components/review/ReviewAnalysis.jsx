@@ -2,7 +2,7 @@ import { reviewData } from "@/lib/static-json";
 
 export default function ReviewAnalysis() {
   return (
-    <div className="w-full lg:w-[600px] ml-hidden lg:ml-auto  grid grid-cols-12 items-start p-4 gap-2 space-y-1 justify-center space-x-4">
+    <div className="w-[400px] lg:w-[600px] ml-hidden lg:ml-auto  grid grid-cols-12 items-start p-4 gap-2 space-y-1 justify-center space-x-4">
       {/* review Labels */}
       <div className="col-span-3 ">
         {reviewData.map((review) => (

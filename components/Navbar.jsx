@@ -6,12 +6,12 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center px-8 py-5 sticky top-0 bg-white">
       {/* Logo */}
-      <Link href="/" className="font-mono text-2xl font-bold text-gray-700">
+      <Link href="/" className="font-mono text-2xl font-bold text-[#495560]">
         tour buddy
       </Link>
 
       {/* Desktop Navbar (Large Screens) */}
-      <div className="hidden md:flex space-x-10 items-center">
+      <div className="hidden lg:block xl:block space-x-10 items-center">
         {navbarJsonObject.map((navbar) => (
           <Link key={navbar.href} href={navbar.href} passHref>
             <span className="text-gray-600 hover:text-blue-500 transition-all duration-300">

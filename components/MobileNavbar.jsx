@@ -4,21 +4,23 @@ import Link from "next/link";
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
 import { IoMdMenu } from "react-icons/io";
+
 export default function MobileNavbar() {
   const [open, setOpen] = useState(false);
+
   return (
     <>
-      {/* Mobile Menu Button (Small Screens) */}
+      {/* Mobile Menu Button (Visible on sm & md, hidden on lg+) */}
       <button
-        className="md:hidden text-gray-600 text-3xl"
+        className="lg:hidden text-gray-600 text-3xl"
         onClick={() => setOpen(!open)}
       >
         {open ? <ImCross /> : <IoMdMenu />}
       </button>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (Visible on sm & md, hidden on lg+) */}
       {open && (
-        <div className="absolute top-16 right-8 bg-white shadow-lg rounded-lg p-5 flex flex-col space-y-4 w-full md:hidden px-20  transition duration-1000">
+        <div className="absolute top-16 right-0 bg-white shadow-lg rounded-lg p-5 flex flex-col space-y-4 w-3/4 sm:w-2/3 md:w-1/2 lg:hidden px-10 transition duration-500">
           {navbarJsonObject.map((navbar) => (
             <Link
               key={navbar.href}

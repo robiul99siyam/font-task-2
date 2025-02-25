@@ -16,19 +16,30 @@ export default function GuideCard({ guide }) {
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..."
         />
+
+        <span className="flex justify-start items-center space-x-0 lg:space-x-1  lg:hidden md:hidden xl:hidden">
+          {Array.from({ length: Number(guide.rating) || 0 }, (_, index) => (
+            <FaStar key={index} className="text-sm lg:text-xl text-[#FFA432]" />
+          ))}
+          <FaStar className="text-sm lg:text-xl text-gray-400" />
+          (584 views)
+        </span>
       </div>
 
       {/* Guide Details */}
       <div className="col-span-1 lg:col-span-7">
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 justify-start items-start lg:items-center">
-          <button className="px-8 font-bold py-2 rounded-full bg-teal-500 text-white w-[140px] text-center">
+          <button className="px-8  font-bold py-2 rounded-full bg-teal-500 text-white w-[140px] text-center">
             {guide.location}
           </button>
-          <span className="flex space-x-1">
+          <span className=" space-x-0 lg:space-x-1 hidden lg:flex md:flex xl:flex justify-center items-center">
             {Array.from({ length: Number(guide.rating) || 0 }, (_, index) => (
-              <FaStar key={index} className="text-xl text-[#FFA432]" />
-            ))}{" "}
-            <FaStar className="text-xl text-gray-400" />
+              <FaStar
+                key={index}
+                className="text-sm lg:text-xl text-[#FFA432]"
+              />
+            ))}
+            <FaStar className="text-sm lg:text-xl text-gray-400" />
             (584 views)
           </span>
         </div>
@@ -37,7 +48,7 @@ export default function GuideCard({ guide }) {
         </h1>
         <div className="flex flex-col lg:flex-row gap-6 justify-start items-start lg:items-center">
           {/* Hours */}
-          <div className="flex items-center gap-1 pr-6 lg:border-r-2 lg:border-gray-300">
+          <div className="flex items-center gap-1 pr-1 lg:pr-6 lg:border-r-2 lg:border-gray-300">
             <FaRegClock /> {guide.hours} hours
           </div>
 
