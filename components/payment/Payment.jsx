@@ -3,34 +3,38 @@ import PaymentForm from "./PaymentForm";
 
 export default function Payment() {
   return (
-    <>
-      <div className="grid grid-cols-12 gap-6 px-5 justify-center items-start">
+    <div className="px-5 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
         {/* Payment Form */}
-        <div className="col-span-8">
-          <h1 className="font-serif text-[36px] mb-6 ">
+        <div className="md:col-span-8">
+          <h1 className="font-serif text-2xl md:text-3xl mb-6 text-center md:text-left">
             Choose Payment Method
           </h1>
           <PaymentForm />
         </div>
 
-        <div className="col-span-4">
+        {/* Payment Image */}
+        <div className="md:col-span-4 flex justify-center">
           <Image
             src="/payment.jpg"
-            width={200}
-            height={200}
+            width={250}
+            height={250}
             alt="payment image"
-            className="mx-auto border border-black rounded-[30px] transparent"
+            className="border border-black rounded-2xl"
           />
         </div>
       </div>
 
-      <Image
-        src="/payment1.jpg"
-        width={800}
-        height={250}
-        alt="payment image"
-        className="mx-auto mt-10 "
-      />
-    </>
+      {/* Banner Image */}
+      <div className="mt-10 flex justify-center">
+        <Image
+          src="/payment1.jpg"
+          width={800}
+          height={250}
+          alt="payment image"
+          className="w-full max-w-xl md:max-w-3xl"
+        />
+      </div>
+    </div>
   );
 }

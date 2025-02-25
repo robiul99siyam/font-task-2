@@ -2,28 +2,32 @@ import { payment_method } from "@/lib/static-json";
 
 export default function PaymentMethod() {
   return (
-    <div>
-      <h1 className="font-bold text-xl mb-6 py-5 lg:py-4 font-serif">
+    <div className="mt-6">
+      <h1 className="font-bold text-xl mb-4 text-center md:text-left">
         Payment Method
       </h1>
 
-      {/* Payment Method Radio Buttons */}
-      {payment_method.map((payment) => (
-        <span
-          key={payment.id}
-          className="bg-[#37B1E2] w-[100px] h-[30px] p-4 rounded-full m-1 "
-        >
-          {" "}
-          <label>
-            <input type="radio" name="payment_method" value={payment.id} />
+      {/* Payment Method Options */}
+      <div className="flex flex-wrap justify-center md:justify-start gap-2">
+        {payment_method.map((payment) => (
+          <label
+            key={payment.id}
+            className="bg-[#37B1E2] text-white w-[120px] h-[40px] flex items-center justify-center rounded-full cursor-pointer"
+          >
+            <input
+              type="radio"
+              name="payment_method"
+              value={payment.id}
+              className="hidden"
+            />
             {payment.name}
           </label>
-        </span>
-      ))}
+        ))}
+      </div>
 
-      {/* Submit Button */}
-      <div className="text-center">
-        <button className="bg-[#13253F] text-white px-5 py-5 mt-10 rounded-full w-[300px] hover:bg-[#153552]">
+      {/* Confirm Button */}
+      <div className="mt-6 text-center">
+        <button className="bg-[#13253F] text-white px-6 py-3 rounded-full w-[90%] max-w-xs hover:bg-[#153552]">
           Confirm Payment
         </button>
       </div>
